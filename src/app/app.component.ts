@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Angular-basics';
+  scrollTop(){
+    window.scrollTo(0, 0);
+  }
 }
