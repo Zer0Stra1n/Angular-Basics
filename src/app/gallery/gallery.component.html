@@ -1,7 +1,7 @@
 <ng-container *ngIf="mediaList.items.length">
     <ul>
         <li *ngFor="let movie of mediaList.items; trackBy:identity">
-            <img id="{{movie.id}}" [src]="movie.poster" alt="Poster for {{movie.title}}">
+            <img id="{{movie.id}}" src="{{movie.poster}}" alt="Poster for {{movie.title}}">
         </li>
     </ul>
 </ng-container>
