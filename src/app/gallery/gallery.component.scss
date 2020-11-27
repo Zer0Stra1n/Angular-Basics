@@ -1,0 +1,19 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+        list-style: none;
+        margin-bottom: 1.5rem;
+
+        img {
+            height: 300px;
+            width: auto;
+
+            &:hover {
+                height: 350px;
+            }
+        }
+    }
+}

@@ -9,7 +9,8 @@ import { Gallery } from './models';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
-  mediaList: any;
+  mediaList: Gallery = new Gallery([]);
+
   constructor(private service: GalleryService, private router: Router) { }
 
   ngOnInit(): void {
@@ -22,5 +23,9 @@ export class GalleryComponent implements OnInit {
     }, error => {
       this.router.navigateByUrl('error');
     });
+  }
+
+  identity(index: number, item: any) {
+    return item.id;
   }
 }
