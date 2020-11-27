@@ -1,0 +1,31 @@
+
+.icon-container, .error-message {
+    text-align: center;
+}
+
+.card-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    span.fas {
+        font-size: 4rem;
+        ~ span.fas {
+            font-size: 2rem;
+            margin-right: 0;
+            vertical-align: super;
+        }
+    }
+}
+
+.error-message {
+    div:first-of-type {
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
