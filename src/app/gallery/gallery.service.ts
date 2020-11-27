@@ -13,7 +13,7 @@ export class GalleryService {
 
   constructor(private http: HttpClient) { }
 
-  getMedia(): Observable<Gallery> {
+  getMediaList(): Observable<Gallery> {
     const url = environment.mediaList;
 
     return this.http.get<MovieBasics[]>(url).pipe(

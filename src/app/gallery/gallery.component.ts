@@ -14,11 +14,11 @@ export class GalleryComponent implements OnInit {
   constructor(private service: GalleryService, private router: Router) { }
 
   ngOnInit(): void {
-    this.getMedia();
+    this.getGallery();
   }
 
-  getMedia() {
-    this.service.getMedia().subscribe((data: Gallery) => {
+  getGallery() {
+    this.service.getMediaList().subscribe((data: Gallery) => {
       this.mediaList = data;
     }, error => {
       this.router.navigateByUrl('error');
