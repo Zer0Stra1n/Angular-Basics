@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GalleryService } from './gallery.service';
-import { Gallery } from './models';
+import { MovieBasics } from './models';
 
 @Component({
   selector: 'app-gallery',
@@ -9,7 +9,7 @@ import { Gallery } from './models';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
-  mediaList: Gallery;
+  mediaList: MovieBasics[];
 
   constructor(private service: GalleryService, private router: Router) { }
 
@@ -18,7 +18,7 @@ export class GalleryComponent implements OnInit {
   }
 
   getGallery() {
-    this.service.getMediaList().subscribe((data: Gallery) => {
+    this.service.getMediaList().subscribe((data: MovieBasics[]) => {
       this.mediaList = data;
     }, error => {
       this.router.navigateByUrl('error');

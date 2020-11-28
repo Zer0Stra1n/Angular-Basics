@@ -1,6 +1,6 @@
-<ng-container *ngIf="mediaList.items">
+<ng-container *ngIf="mediaList.length">
     <ul>
-        <li *ngFor="let movie of mediaList.items; trackBy:identity">
+        <li *ngFor="let movie of mediaList; trackBy:identity">
             <div class="img-wrapper">
                 <img class="img-fluid" id="{{movie.id}}" src="{{movie.poster}}" alt="Poster for {{movie.title}}">
                 <div class="overlay">{{movie.title}}</div>    

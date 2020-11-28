@@ -4,11 +4,3 @@ export interface MovieBasics {
     title: string;
     poster: string;
 }
-
-export class Gallery {
-    items: MovieBasics[];
-
-    constructor(resp: MovieBasics[]){
-        this.items = resp;
-    }
-}
