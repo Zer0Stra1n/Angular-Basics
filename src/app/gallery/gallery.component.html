@@ -1,7 +1,10 @@
 <ng-container *ngIf="mediaList.items">
     <ul>
         <li *ngFor="let movie of mediaList.items; trackBy:identity">
-            <img id="{{movie.id}}" src="{{movie.poster}}" alt="Poster for {{movie.title}}">
+            <div class="img-wrapper">
+                <img class="img-fluid" id="{{movie.id}}" src="{{movie.poster}}" alt="Poster for {{movie.title}}">
+                <div class="overlay">{{movie.title}}</div>    
+            </div>
         </li>
     </ul>
 </ng-container>
