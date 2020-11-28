@@ -9,7 +9,7 @@ import { Gallery } from './models';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
-  mediaList: Gallery = new Gallery([]);
+  mediaList: Gallery;
 
   constructor(private service: GalleryService, private router: Router) { }
 
