@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  mediaList: '../assets/fake-data.json'
+  mediaList: '../assets/fake-list.json',
+  mediaDetail: '../assets/fake-details.json'
 };
 
 /*
