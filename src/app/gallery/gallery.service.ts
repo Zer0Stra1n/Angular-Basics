@@ -17,4 +17,10 @@ export class GalleryService {
 
     return this.http.get<MovieBasics[]>(url);
   };
+
+  getDetails(id: string) {
+    const url = environment['mediaDetail'] || `https://gtrtoph0d7.execute-api.us-east-1.amazonaws.com/dev/media/${id}`
+
+    return this.http.get(url);
+  }
 }

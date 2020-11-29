@@ -10,6 +10,8 @@ import { MovieBasics } from './models';
 })
 export class GalleryComponent implements OnInit {
   mediaList: MovieBasics[];
+  selectedMovie: string;
+  showModal = false;
 
   constructor(private service: GalleryService, private router: Router) { }
 
@@ -23,6 +25,15 @@ export class GalleryComponent implements OnInit {
     }, error => {
       this.router.navigateByUrl('error');
     });
+  }
+
+  setSelected(id) {
+    this.selectedMovie = id;
+    this.showModal = true;
+  }
+
+  resetModal(event){
+    this.showModal = false;
   }
 
   identity(index: number, item: any) {

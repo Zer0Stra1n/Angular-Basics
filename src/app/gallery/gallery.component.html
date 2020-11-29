@@ -1,10 +1,12 @@
 <ng-container *ngIf="mediaList.length">
     <ul>
         <li *ngFor="let movie of mediaList; trackBy:identity">
-            <div class="img-wrapper">
+            <div class="img-wrapper" (click)="setSelected(movie.id)">
                 <img class="img-fluid" id="{{movie.id}}" src="{{movie.poster}}" alt="Poster for {{movie.title}}">
                 <div class="overlay">{{movie.title}}</div>    
             </div>
         </li>
     </ul>
+
+    <app-detail-modal [selected]="selectedMovie" (modalClose)="resetModal($event)" [isShown]="showModal"></app-detail-modal>
 </ng-container>
