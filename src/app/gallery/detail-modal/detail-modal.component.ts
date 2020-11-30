@@ -9,7 +9,6 @@ import { GalleryService } from '../gallery.service';
 })
 export class DetailModalComponent implements OnChanges {
   @Input() selected: string;
-  @Input() isShown = false;
   @Output() modalClose = new EventEmitter<boolean>();
   movieDetail: any;
 
@@ -23,7 +22,6 @@ export class DetailModalComponent implements OnChanges {
   }
 
   closeModal(){
-    this.isShown = false;
     this.modalClose.emit(true);
   }
 

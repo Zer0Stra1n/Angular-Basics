@@ -9,7 +9,7 @@ import { MovieBasics } from './models';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
-  mediaList: MovieBasics[];
+  mediaList: MovieBasics[] = [];
   selectedMovie: string;
   showModal = false;
 

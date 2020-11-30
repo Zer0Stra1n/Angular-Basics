@@ -8,5 +8,5 @@
         </li>
     </ul>
 
-    <app-detail-modal [selected]="selectedMovie" (modalClose)="resetModal($event)" [isShown]="showModal"></app-detail-modal>
+    <app-detail-modal *ngIf="showModal" [selected]="selectedMovie" (modalClose)="resetModal($event)"></app-detail-modal>
 </ng-container>

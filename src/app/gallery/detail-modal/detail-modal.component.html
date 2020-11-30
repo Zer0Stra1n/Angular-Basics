@@ -1,39 +1,37 @@
-<ng-container *ngIf="isShown && movieDetail">
-    <div class="modal fade show d-block" id="{{movieDetail.id}}" tabindex="-1"
-        attr.aria-labelledby="{{movieDetail.title}}" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">{{movieDetail.title}}</h5>
-                    <button type="button" class="close" (click)="closeModal()" aria-label="Close">
-                        <span aria-hidden="true" class="fas fa-times"></span>
-                    </button>
+<div class="modal fade show d-block" id="{{movieDetail.id}}" tabindex="-1" attr.aria-labelledby="{{movieDetail.title}}"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{movieDetail.title}}</h5>
+                <button type="button" class="close" (click)="closeModal()" aria-label="Close">
+                    <span aria-hidden="true" class="fas fa-times"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe [src]="sanitizeUrl()" frameborder="0" allowfullscreen></iframe>
+                <div class="plot">
+                    <div class="heading">Synopsis:</div>
+                    <div>{{movieDetail.plot}}</div>
                 </div>
-                <div class="modal-body">
-                    <iframe [src]="sanitizeUrl()" frameborder="0" allowfullscreen></iframe>
-                    <div class="plot">
-                        <div class="heading">Synopsis:</div>
-                        <div>{{movieDetail.plot}}</div>
+                <div class="info">
+                    <div>
+                        <span>Rating:</span><span>{{movieDetail.rated}}</span>
                     </div>
-                    <div class="info">
-                        <div>
-                            <span>Rating:</span><span>{{movieDetail.rated}}</span>
-                        </div>
-                        <div>
-                            <span>Director:</span><span>{{movieDetail.director}}</span>
-                        </div>
-                        <div>
-                            <span>Writer:</span><span>{{movieDetail.writer}}</span>
-                        </div>
-                        <div>
-                            <span>Actors:</span><span>{{movieDetail.actors}}</span>
-                        </div>
-                        <div>
-                            <span>Awards:</span><span>{{movieDetail.awards}}</span>
-                        </div>
+                    <div>
+                        <span>Director:</span><span>{{movieDetail.director}}</span>
+                    </div>
+                    <div>
+                        <span>Writer:</span><span>{{movieDetail.writer}}</span>
+                    </div>
+                    <div>
+                        <span>Actors:</span><span>{{movieDetail.actors}}</span>
+                    </div>
+                    <div>
+                        <span>Awards:</span><span>{{movieDetail.awards}}</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</ng-container>
+</div>
